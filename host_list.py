@@ -11,6 +11,8 @@
 # 5) There is the presence of both locally-routed and non-locally routed VLANs. This script was created for use in a VxLAN-bridging environment
 #    with the idea that a set of routers handle routing for VLANs being flooded via VxLAN, hence the presence of the router_param variable in this
 #    script.
+# 
+# In order to run this script simply replace the values 'YOUR SWITCH HOSTNAME HERE' and 'YOUR ROUTER HOSTNAME HERE' with relevant names. 
 #
 # This script has been written by Ehsan Vessal. You may contact me at ehsan.vessal@gmail.com
 
@@ -28,14 +30,14 @@ from credentials import username, password
 
 leaf_param = pyeapi.client.connect(
     transport='https',
-    host = 'iad-colo1-dcr-lf-45',
+    host = 'YOUR SWITCH HOSTNAME HERE',
     username = username,
     password = password
 )
 
 router_param = pyeapi.client.connect(
     transport='https',
-    host = 'iad-colo1-dcr-rt-01',
+    host = 'YOUR ROUTER HOSTNAME HERE',
     username = username,
     password = password
 )
