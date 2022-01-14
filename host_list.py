@@ -83,7 +83,8 @@ vlan_ints = [
 ]
 
 # VLANs configured on the leaf pair are captured and compared to the Layer-3 interfaces that were previously grabbed
-# This determined whether they are locally routed VLANs or are learned via VXLAN. 
+# This determined whether they are locally routed VLANs or are learned via VXLAN. Unnecessary VLANs, such as VLAN 1 and
+# MLAG peering VLANs, have been filtered out. 
 
 leaf_vlans = [
         vlan 
